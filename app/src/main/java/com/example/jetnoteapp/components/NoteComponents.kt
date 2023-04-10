@@ -31,6 +31,7 @@ fun NoteInputText(
     TextField(
         value = text,
         onValueChange = onTextChange,
+        label = { Text(text = label) },
         colors = TextFieldDefaults.textFieldColors(
             backgroundColor = Color.Transparent
         ),
