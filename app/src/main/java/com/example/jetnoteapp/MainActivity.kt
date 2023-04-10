@@ -9,6 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.jetnoteapp.data.NotesDataSource
 import com.example.jetnoteapp.ui.theme.JetNoteAppTheme
 import com.example.jetnoteapp.screen.NoteScreen
 
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     NoteScreen(
-                        notes = emptyList(),
+                        notes = NotesDataSource().loadNotes(),
                         onAddNote = {},
                         onRemoveNote = {}
                     )
