@@ -9,7 +9,7 @@ import java.time.Instant
 import java.util.*
 
 @Entity(tableName = "notes_tbl")
-data class Note @RequiresApi(Build.VERSION_CODES.O) constructor(
+data class Note constructor(
     @PrimaryKey val id: UUID = UUID.randomUUID(),
     @ColumnInfo(name = "note_title") val title: String,
     @ColumnInfo(name = "note_description") val description: String,

@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import com.example.jetnoteapp.components.NoteButton
 import com.example.jetnoteapp.components.NoteInputText
 import com.example.jetnoteapp.data.NotesDataSource
+import com.example.jetnoteapp.util.formatDate
 import java.time.format.DateTimeFormatter
 
 
@@ -132,7 +133,7 @@ fun NoteRow(
                 .padding(horizontal = 14.dp, vertical = 6.dp)) {
             Text(text = note.title, style = MaterialTheme.typography.subtitle2)
             Text(text = note.description, style = MaterialTheme.typography.subtitle1)
-            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")), style = MaterialTheme.typography.caption)
+            Text(text = formatDate(note.entryDate.time), style = MaterialTheme.typography.caption)
         }
 
     }
